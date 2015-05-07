@@ -192,10 +192,9 @@ def retrieve_splicing(species):
         basedir = "/projects/ps-yeolab/lovci/AS_STRUCTURE/gencode/" + species + "data4/"
     else:
         print "Where am I?"
-        raise Exception
-        basedir = "~/gscripts"
+        basedir = os.path.join(os.environ['HOME'], "gscripts_rescource", "AS_STRUCTURE", "gencode",  species + "data4")
+        assert os.path.exists(basedir)
 
-        
     try:
         info= pickle.load(open((basedir + species + ".spliceDict_simple.pickle")))
     except:
