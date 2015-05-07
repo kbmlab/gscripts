@@ -192,7 +192,7 @@ def retrieve_splicing(species):
         basedir = "/projects/ps-yeolab/lovci/AS_STRUCTURE/gencode/" + species + "data4/"
     else:
         print "Where am I?"
-        basedir = os.path.join(os.environ['HOME'], "gscripts_rescource", "AS_STRUCTURE", "gencode",  species + "data4")
+        basedir = os.path.join(os.environ['GENOME'], "AS_STRUCTURE", "gencode",  species + "data4")
         assert os.path.exists(basedir)
 
     try:
